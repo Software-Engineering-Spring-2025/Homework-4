@@ -1,0 +1,1 @@
+gawk -f class.awk titanic.csv
