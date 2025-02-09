@@ -1,15 +1,19 @@
 BEGIN {
-    sum = 0
-    count = 0
+  FS = ","  # Set field separator to comma
+  print "Average Age"
+  print "------------------------"
+  count = 0
+  sum = 0
 }
 
-{
-    sum += $5
-    count++
+NR > 1 { # Skip the header row
+  age = $7   
+  sum += age
+  count++
 }
 
 END {
- print "sum: " sum 
- print "count: " count 
- print "average age: " sum/count
+    print "Sum: " sum 
+    print "Count: " count 
+    print "Average age: " sum/count
 }
