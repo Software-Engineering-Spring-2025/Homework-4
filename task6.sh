@@ -1,0 +1,1 @@
+gawk -f survived.awk titanic.csv
